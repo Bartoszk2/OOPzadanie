@@ -1,8 +1,7 @@
 ﻿
-Desk d1 = new Desk();
+Desk d1 = new Desk("green", "Auchan");
 
 d1.colour = "green";
-d1.height = 0.5m;
 d1.brand = "Auchan";
 
 while(true)
@@ -12,12 +11,14 @@ while(true)
 }
 
 
-class Desk
+class Desk(int height, string colour, string brand)
 {
     public const decimal MAX_HEIGHT = 2.0m;
-    public decimal height;
-    public string colour;
-    public string brand;
+    private decimal height = height;
+    public string colour = colour;
+    public string brand = brand;
+
+    public decimal GetHeight() {  return height; }
 
     public void Lift()
     {
