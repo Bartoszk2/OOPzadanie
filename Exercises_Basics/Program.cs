@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-       public class CAR()
+        public class CAR()
         {
 
             //zad 1
@@ -18,29 +18,31 @@
             }
         }
 
-        public class Student()
+        public class Student(string name, int grade)
         {
-            //zad2
-            public string name { get; private set;}
-            public int grade { get; private set;}
+            //zad 2
+             public bool IsPassing()
+             {
+                return grade != 1;
 
-            public bool IsPassing()
+             }
+        
+        }
+
+        public class book()
+        {
+            public string Title { get; private set; }
+            public string Author { get; private set; }
+            public int Pages { get; private set; }
+
+            public void GetSummary()
             {
-                if (grade != 1)
-                {
-                    Console.WriteLine("zdałeś koleś");
-                    return true;
 
-                }
-                else
-                {
-                    Console.WriteLine("taktyczna pizda na koniec");
-                    return false;
-                }
             }
         }
 
-        public static void Main(string[] args) { 
+        public static void Main(string[] args)
+        { 
         
         }
     }
